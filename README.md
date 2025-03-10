@@ -1,4 +1,4 @@
-# Gaussian Queueing  
+# Gaussian Job Queueing  
 
 A lightweight script for efficiently managing Gaussian job submissions in a Linux terminal.  
 
