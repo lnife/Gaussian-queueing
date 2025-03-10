@@ -1,8 +1,0 @@
-As an exercise I want you to download the script file and all the 4 test files (I altered the 4th file so it'll show error)
-
-you'll get an normal termination or error depending upon your gaussian input
-and two directories will be created (if yor're not getting an error then error directory wont be formed)
-you can see that in outut folder 
-
-further jobs that you'll run will be saved is those two directories itself
-
