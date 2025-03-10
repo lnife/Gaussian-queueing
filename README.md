@@ -10,3 +10,23 @@ A lightweight script for efficiently managing Gaussian job submissions in a Linu
    bash queue_jobs.sh
 
 
+If execution fails, grant execution permission:
+```
+chmod +x queue_jobs.sh
+```
+## Functionality  
+
+- Organizes jobs into two directories:  
+  - **Normal_Termination/** → Stores successfully completed jobs  
+  - **Error/** → Stores jobs that encountered errors  
+
+
+## Upcoming Features
+
+ A script for automatic conversion of .chk files to .fchk alongside queueing
+
+
+## License
+
+This project is open-source. Feel free to modify and improve it.
+
