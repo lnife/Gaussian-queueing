@@ -13,6 +13,7 @@ A lightweight script for efficiently managing Gaussian job submissions in a Linu
 If execution fails, grant execution permission:
 ```
 chmod +x queue_jobs.sh
+bash queue_jobs.sh
 ```
 ## Functionality  
 
