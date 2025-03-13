@@ -17,7 +17,7 @@ for f in *.gjf; do  # Only read files available in the same directory
     fi
 
     mkdir -p "$dest"
-    mv "$gaussfile.gjf" "$gaussfile.log" "$gaussfile.chk" "$gaussfile.fchk" "$dest/" 2>/dev/null
+    mv "$gaussfile.gjf" "$gaussfile.log" "$gaussfile.chk" "$dest/" 2>/dev/null
 
 done
 
