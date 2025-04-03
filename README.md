@@ -9,6 +9,14 @@ A lightweight script for efficiently managing Gaussian job submissions in a Linu
    ```bash
    bash queue_jobs.sh
 
+   #or
+
+   bash fchk_queue_jobs.sh   #this converts .chk files to .fchk file
+
+   #or
+
+   bash xqueue_jobs.sh  #This creats separate folder inside normal termination and error (named after the file .gjf file) 
+
 
 If execution fails, grant execution permission:
 ```
