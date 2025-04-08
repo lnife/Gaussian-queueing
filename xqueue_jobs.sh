@@ -15,6 +15,7 @@ sleep 1
         echo -e "\e[3;38;2;106;177;135m$gaussfile Achieved Normal Termination.\n-----------------------------------------\n\e[0m"
     else
         dest="./Error/$gaussfile/"
+        tail -n 4 "$gaussfile.log"
         echo -e "\e[3;38;2;250;103;117m$gaussfile encountered an error.\n-----------------------------------------\n\e[0m"
     fi
 
