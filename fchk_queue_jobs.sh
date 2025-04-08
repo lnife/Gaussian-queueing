@@ -7,13 +7,15 @@ for f in *.gjf; do  # Only read files available in the same directory
     echo -e "\e[38;2;32;148;139m$gaussfile job started at $(date +%H:%M:%S'('%Y-%m-%d')')\e[0m"
 
     g16 < "$gaussfile.gjf" > "$gaussfile.log"  # Run Gaussian job
-    formchk "$gaussfile.chk" "$gaussfile.fchk"  # Create formatted checkpoint file
-
+    formchk "$gaussfile.chk" "$gaussfile.fchk"  # Create formatted checkpoint fil
+sleep 1    
     if grep -q "Normal termination" "$gaussfile.log"; then
         dest="./Normal_Termination/"
+        tail -n 4 "$gaussfile.log"
         echo -e "\e[3;38;2;106;177;135m$gaussfile Achieved Normal Termination.\n-----------------------------------------\n\e[0m"
     else
         dest="./Error/"
+        tail -n 4 "$gaussfile.log"
         echo -e "\e[3;38;2;250;103;117m$gaussfile encountered an error.\n-----------------------------------------\n\e[0m"
     fi
 
