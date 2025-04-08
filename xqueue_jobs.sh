@@ -8,9 +8,10 @@ for f in *.gjf; do  # Only read files available in the same directory
 
     g16 < "$gaussfile.gjf" > "$gaussfile.log"  # Run Gaussian job
     formchk "$gaussfile.chk" "$gaussfile.fchk"  # Create formatted checkpoint file
-
+sleep 1
     if grep -q "Normal termination" "$gaussfile.log"; then
         dest="./Normal_Termination/$gaussfile/"
+        tail -n 4 "$gaussfile.log"
         echo -e "\e[3;38;2;106;177;135m$gaussfile Achieved Normal Termination.\n-----------------------------------------\n\e[0m"
     else
         dest="./Error/$gaussfile/"
@@ -21,5 +22,7 @@ for f in *.gjf; do  # Only read files available in the same directory
     mv "$gaussfile.gjf" "$gaussfile.log" "$gaussfile.chk" "$gaussfile.fchk" "$dest/" 2>/dev/null
 
 done
+
+
 
 
